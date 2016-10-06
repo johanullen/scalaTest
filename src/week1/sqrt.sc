@@ -49,4 +49,5 @@ object sqrt {
   factorialOrg(3)                                 //> res20: Int = 6
   factorialOrg(4)                                 //> res21: Int = 24
   factorialOrg(5)                                 //> res22: Int = 120
+  
 }

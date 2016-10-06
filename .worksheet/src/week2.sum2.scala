@@ -18,4 +18,5 @@ object sum2{;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; d
   sum(cube)(1,3);System.out.println("""res2: Int = """ + $show(res$2));$skip(30); val res$3 = 
   cube(1) + cube(2) + cube(3);System.out.println("""res3: Int = """ + $show(res$3));$skip(12); val res$4 = 
   sum(cube);System.out.println("""res4: (Int, Int) => Int = """ + $show(res$4))}
+  
 }

@@ -18,4 +18,5 @@ object sum2{
   sum(cube)(1,3)                                  //> res2: Int = 36
   cube(1) + cube(2) + cube(3)                     //> res3: Int = 36
   sum(cube)                                       //> res4: (Int, Int) => Int = <function2>
+  
 }

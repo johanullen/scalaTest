@@ -42,5 +42,6 @@ object sum {
   }                                               //> generic: (o: (Int, Int) => Int, i: Int)(f: Int => Int)(a: Int, b: Int)Int
 
   generic((x, y) => x * y, 1)(x => x)(1, 5)       //> res12: Int = 120
+  
 
 }

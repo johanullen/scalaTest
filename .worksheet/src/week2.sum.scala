@@ -41,5 +41,6 @@ object sum {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; d
   };System.out.println("""generic: (o: (Int, Int) => Int, i: Int)(f: Int => Int)(a: Int, b: Int)Int""");$skip(45); val res$12 = 
 
   generic((x, y) => x * y, 1)(x => x)(1, 5);System.out.println("""res12: Int = """ + $show(res$12))}
+  
 
 }

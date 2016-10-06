@@ -1,6 +1,6 @@
 package week3
 
-trait List[T] {
+trait List[+T] {
   def isEmpty: Boolean
   def head: T
   def tail: List[T]
@@ -12,14 +12,25 @@ trait List[T] {
     }
     loop(0, this)
   }
+  def prepend[U >: T](elem: U): List[U] = new Cons[U](elem, this)
 }
 class Cons[T](val head: T, val tail: List[T]) extends List[T] {
   def isEmpty() = false
   override def toString(): String = "" + head + "," + tail
 }
-class Nil[T] extends List[T] {
+object Nil extends List[Nothing] {
   def isEmpty() = true
   def head: Nothing = throw new NoSuchElementException("Nik.head")
   def tail: Nothing = throw new NoSuchElementException("Nil.tail")
   override def toString(): String = "nil"
+}
+
+object List {
+  def apply[T](): List[T] = Nil
+  def apply[T](x: T): List[T] = {
+    new Cons[T](x, List[T]())
+  }
+  def apply[T](a: T, b: T): List[T] = {
+    new Cons[T](a, List(b))
+  }
 }
